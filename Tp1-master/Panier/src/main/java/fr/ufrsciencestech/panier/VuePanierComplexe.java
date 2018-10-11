@@ -5,6 +5,10 @@
  */
 package fr.ufrsciencestech.panier;
 
+import java.util.Observable;
+import java.util.Observer;
+import javax.swing.JButton;
+
 /**
  *
  * @author jm274343
@@ -113,4 +117,22 @@ public class VuePanierComplexe extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
+
+    public void addControleur(MControler c)
+    {
+        jButton1.addActionListener(c);
+        jButton2.addActionListener(c);
+    }
+    
+    public JButton getBtn1(){
+        return jButton1;
+    }
+    public JButton getBtn2(){
+        return jButton2;
+    }
+    @Override
+    public void update(Observable o, Object arg) {
+        jTextArea1.setText(Integer.toString(((Panier)o).quantite())+" Oranges \n" + Integer.toString(((Panier)b).quantite())+" Bananes \n" +
+                Integer.toString(((Panier)c).quantite())+" Cerises");
+    }
 }
