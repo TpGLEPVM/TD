@@ -9,7 +9,7 @@ import fr.ufrsciencestech.panier.OrangeNegException;
  *
  * @author vb394093
  */
-public class Orange {
+public class Orange implements Fruits {
     private double prix;
     private String origine;
     
