@@ -15,12 +15,9 @@ public class Cerise extends FruitSimple {
     super();
     }
     
-    public Cerise(double np, String no, boolean cp){
+    public Cerise(double np, String no, boolean cp) throws FruitSimpleNegException{
         super(np, no, cp);
     }
-    
-    public  String toString(){
-     return super();
-    }
+
     
 }
