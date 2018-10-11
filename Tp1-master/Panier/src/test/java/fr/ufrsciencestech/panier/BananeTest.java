@@ -40,7 +40,7 @@ public class BananeTest {
     @Test(expected=OrangeNegException.class)
     public void testPrixNegatif() throws OrangeNegException {
         System.out.println("Prix négatif");        
-        Banane instance2 = new Banane(-1.0,"France");
+        Banane instance2 = new Banane(-1.0,"France",false);
     }
 
     /**

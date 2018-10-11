@@ -17,7 +17,7 @@ public class Banane extends FruitSimple{
         super();
     }
     
-    public Banane(double prix, String origine, double np, String no, boolean cp) throws FruitSimpleNegException {
+    public Banane(double np, String no, boolean cp) throws FruitSimpleNegException {
         super(np, no, cp);
         this.prix = prix;
         this.origine = origine;
