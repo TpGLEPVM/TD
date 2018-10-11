@@ -21,7 +21,7 @@ public abstract class FruitSimple {
     
     public FruitSimple(double np, String no) throws FruitSimpleNegException{
      if (prix <= 0.0) {
-      throws FruitSimpleNegException();
+      throw new FruitSimpleNegException();
      }
      prix=np;
      origine=no;
