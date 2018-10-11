@@ -19,7 +19,10 @@ public abstract class FruitSimple {
         origine="France";
     }
     
-    public FruitSimple(double np, String no){
+    public FruitSimple(double np, String no) throws FruitSimpleNegException{
+     if (prix <= 0.0) {
+      throws FruitSimpleNegException();
+     }
      prix=np;
      origine=no;
     }
