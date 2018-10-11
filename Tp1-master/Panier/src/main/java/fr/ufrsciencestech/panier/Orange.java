@@ -12,7 +12,7 @@ import fr.ufrsciencestech.panier.OrangeNegException;
 public class Orange {
     private double prix;
     private String origine;
-    
+     
     public Orange()
     {
         this.prix=1.0;
