@@ -12,17 +12,17 @@ import java.util.Observable;
  * @author vb394093
  */
 public class Panier extends Observable{
-    private java.util.ArrayList<Orange> listOrange;
+    private java.util.ArrayList<Banane> listOrange;
     private int maxOrange;
                  
     public Panier(){
         this.maxOrange=5;
-        this.listOrange = new java.util.ArrayList<Orange>();
+        this.listOrange = new java.util.ArrayList<Banane>();
     }
     
     public Panier(int max){
         this.maxOrange=max;
-        this.listOrange = new java.util.ArrayList<Orange>();
+        this.listOrange = new java.util.ArrayList<Banane>();
     }
     public int quantite(){
         return listOrange.size();
@@ -50,16 +50,16 @@ public class Panier extends Observable{
      {
          if(!listOrange.isEmpty())
          {
-             Orange o = listOrange.get(listOrange.size()-1);
+             Banane o = listOrange.get(listOrange.size()-1);
             ajoute(o);
          }
          else
          {
-             ajoute(new Orange());
+             ajoute(new Banane());
          }
      }
      
-     public void ajoute(Orange o){
+     public void ajoute(Banane o){
          if(listOrange.size()==maxOrange || o == null){
              System.out.println("Trop d'oranges dans le panier.");
          }
@@ -84,8 +84,8 @@ public class Panier extends Observable{
      
      public double getPrix(){
          double somme=0;
-         for(Orange o:listOrange){
-             somme+=((Orange)o).getPrix();
+         for(Banane o:listOrange){
+             somme+=((Banane)o).getPrix();
          }
          return somme;
      }

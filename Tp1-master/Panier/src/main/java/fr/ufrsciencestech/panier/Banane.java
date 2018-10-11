@@ -9,17 +9,17 @@ import fr.ufrsciencestech.panier.OrangeNegException;
  *
  * @author vb394093
  */
-public class Orange implements Fruits {
+public class Banane {
     private double prix;
     private String origine;
     
-    public Orange()
+    public Banane()
     {
         this.prix=1.0;
         this.origine = "France";
     }
     
-    public Orange(double prix,String origine) throws OrangeNegException {
+    public Banane(double prix,String origine) throws OrangeNegException {
         if(prix<=0){
             throw new OrangeNegException();
         }
