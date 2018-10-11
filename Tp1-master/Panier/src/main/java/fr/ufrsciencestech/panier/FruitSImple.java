@@ -11,4 +11,42 @@ package fr.ufrsciencestech.panier;
  */
 public abstract class FruitSImple {
     
-}
+    private double prix;
+    private String origine;
+    
+    public FruitSimple(){
+        prix=0.0;
+        origine="France";
+    }
+    
+    public FruitSimple(double np, String no){
+     prix=np;
+     origine=no;
+    }
+    
+    public double getPrix(){
+     return this.prix;
+    }
+    
+    public String getOrigine(){
+    retrun this.origine;
+    }
+    
+    public void setPrix(double np){
+    prix=np;
+    }
+    
+    public void setOrigine(String no){
+    origine=no;
+    }
+    
+    public String toString(){
+     String res="";
+     res+= "Prix = "+this.prix+"\n";
+     res+= " Origine : "+this.origine+"\n";
+     return res;
+    }
+    
+    }
+    
+
