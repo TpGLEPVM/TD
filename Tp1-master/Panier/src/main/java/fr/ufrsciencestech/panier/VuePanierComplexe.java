@@ -6,7 +6,6 @@
 package fr.ufrsciencestech.panier;
 
 import java.util.Observable;
-import java.util.Observer;
 import javax.swing.JButton;
 
 /**
@@ -103,6 +102,7 @@ public class VuePanierComplexe extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new VuePanierComplexe().setVisible(true);
             }
@@ -130,9 +130,8 @@ public class VuePanierComplexe extends javax.swing.JFrame {
     public JButton getBtn2(){
         return jButton2;
     }
-    @Override
     public void update(Observable o, Object arg) {
-        jTextArea1.setText(Integer.toString(((Panier)o).quantite())+" Oranges \n" + Integer.toString(((Panier)b).quantite())+" Bananes \n" +
-                Integer.toString(((Panier)c).quantite())+" Cerises");
+        jTextArea1.setText(Integer.toString(((Panier)o).quantite())+" Oranges \n" + Integer.toString(((Panier)o).quantite())+" Bananes \n" +
+                Integer.toString(((Panier)o).quantite())+" Cerises");
     }
 }
