@@ -5,6 +5,8 @@
  */
 package fr.ufrsciencestech.panier;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ai265149
@@ -22,9 +24,11 @@ public class Macedoine {
     }
     
     public String toString(){
-     for (int i=0; i< listeM.size(); i++) {
-      this.listeM.get(i).toString();
-     }
+           String s = "";
+        for (int i=0; i< listeM.size(); i++) {
+         s+=this.listeM.get(i).toString();
+        }
+        return s;
     }
     
     public boolean isSedLess(){
