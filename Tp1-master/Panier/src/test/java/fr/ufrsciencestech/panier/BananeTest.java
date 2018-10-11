@@ -38,7 +38,7 @@ public class BananeTest {
     }
     
     @Test(expected=OrangeNegException.class)
-    public void testPrixNegatif() throws OrangeNegException {
+    public void testPrixNegatif() throws FruitSimpleNegException {
         System.out.println("Prix négatif");        
         Banane instance2 = new Banane(-1.0,"France",false);
     }
@@ -59,12 +59,12 @@ public class BananeTest {
      * Test of getOrigine method, of class Banane.
      */
     @Test
-    public void testGetOrigine() throws OrangeNegException {
+    public void testGetOrigine() throws FruitSimpleNegException {
         System.out.println("getOrigine");
         String pays = "Espagne";
         
         Banane instance = new Banane();
-        Banane instance2 = new Banane(1.0, pays);
+        Banane instance2 = new Banane(1.0, pays,false);
         
         String expResult = "France";
         String expResult2 = pays;
@@ -77,17 +77,17 @@ public class BananeTest {
     }
 
     /**
-     * Test of setPrix method, of class Banane.
+     * Test of setPrix method, of clFruitSimpleNegExceptionass Banane.
      */
     @Test
-    public void testSetPrix() throws OrangeNegException {
+    public void testSetPrix() throws FruitSimpleNegException {
         System.out.println("setPrix");
         double prix = 1.0;
         Banane instance = new Banane();
         instance.setPrix(prix);
         double result=instance.getPrix();
         
-        Banane instance2 = new Banane(2.5,"Espagne");
+        Banane instance2 = new Banane(2.5,"Espagne",false);
         instance2.setPrix(prix);
         double result2=instance2.getPrix();
         assertTrue(prix==result2);
