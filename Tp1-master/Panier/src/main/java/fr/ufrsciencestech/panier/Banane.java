@@ -13,9 +13,8 @@ public class Banane extends FruitSimple{
     private double prix;
     private String origine;
 
-    public Banane(double prix, String origine) {
-        this.prix = prix;
-        this.origine = origine;
+    public Banane(){
+        super();
     }
 
     public Banane(double prix, String origine, double np, String no) {
