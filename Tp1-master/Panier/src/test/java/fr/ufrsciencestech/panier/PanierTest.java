@@ -22,7 +22,8 @@ import static org.mockito.Mockito.when;
  */
 public class PanierTest {
     Panier pvide,p1,p2,pplein;
-    Orange o1,o2;
+    Orange o1;
+    Orange o2;
     public PanierTest() {
     }
     
@@ -146,7 +147,7 @@ public class PanierTest {
         assertEquals(expResult, result);
         
         String expResult2 = "Orange :\nPrix : "+"1.0"+"\nOrigine : "+"France"+"\n\n" + "Orange :\nPrix : "+"2.0"+"\nOrigine : "+"Espagne"+"\n\n";
-       Orange mock1 = mock(Orange.class);
+        Orange mock1 = mock(Orange.class);
         when(mock1.toString()).thenReturn("Orange :\nPrix : "+"1.0"+"\nOrigine : "+"France"+"\n\n");
         Orange mock2 = mock(Orange.class);
         when(mock2.toString()).thenReturn("Orange :\nPrix : "+"2.0"+"\nOrigine : "+"Espagne"+"\n\n");

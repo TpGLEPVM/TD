@@ -27,9 +27,9 @@ public class App
         App app = (App)context.getBean("App");
         
         Panier p = new Panier();
-        p.ajoute(new Banane(0.8,"France"));
-        p.ajoute(new Banane(0.8,"France"));
-        p.ajoute(new Banane(0.9,"France"));
+        p.ajoute(new Orange(0.8,"France"));
+        p.ajoute(new Orange(0.8,"France"));
+        p.ajoute(new Orange(0.9,"France"));
         //System.out.println(p.quantite());
         p.boycotteOrigine("France");
         System.out.println(p.toString());

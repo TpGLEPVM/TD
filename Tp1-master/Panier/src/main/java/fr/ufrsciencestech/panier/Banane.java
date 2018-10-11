@@ -9,47 +9,26 @@ import fr.ufrsciencestech.panier.OrangeNegException;
  *
  * @author vb394093
  */
-public class Banane {
+public class Banane extends FruitSimple{
     private double prix;
     private String origine;
-    
-    public Banane()
-    {
-        this.prix=1.0;
-        this.origine = "France";
-    }
-    
-    public Banane(double prix,String origine) throws OrangeNegException {
-        if(prix<=0){
-            throw new OrangeNegException();
-        }
-        this.prix=prix;
-        this.origine=origine;
-    }
-    public double getPrix(){
-        return prix;
-    }
-    public String getOrigine(){
-        return origine;
-    }
-    /**
-     * @param prix the prix to set
-     */
-    public void setPrix(double prix) {
-        this.prix = prix;
-    }
 
-    /**
-     * @param origine the origine to set
-     */
-    public void setOrigine(String origine) {
+    public Banane(double prix, String origine) {
+        this.prix = prix;
         this.origine = origine;
     }
+
+    public Banane(double prix, String origine, double np, String no) {
+        super(np, no);
+        this.prix = prix;
+        this.origine = origine;
+    }
+
+    @Override
     public String toString(){
         String s="";
-        s+="Orange :\n";
-        s+="Prix : "+Double.toString(this.prix)+"\n";
-        s+="Origine : "+this.origine+"\n\n";
+        s+="Fruit type : Banane";
+        s+=super.toString();
         return s;
     }
     
